@@ -57,7 +57,6 @@ print(confusion_matrix(y_test,pred))
 print(classification_report(y_test,pred))
 
 # Choosing a K Value
-Let's go ahead and use the elbow method to pick a good K Value!
 
 error_rate = []
 
@@ -77,7 +76,7 @@ plt.xlabel('K')
 plt.ylabel('Error Rate')
 
 ## Retrain with new K Value
-knn = KNeighborsClassifier(n_neighbors=30) //here  k=30 for knn model
+knn = KNeighborsClassifier(n_neighbors=30) 
 
 knn.fit(X_train,y_train)
 pred = knn.predict(X_test)
